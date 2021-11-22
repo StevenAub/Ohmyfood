@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 OpenClassRooms",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenAub/Ohmyfood.git"
+  },
+  "author": "StevenAub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenAub/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/StevenAub/Ohmyfood#readme"
+}
