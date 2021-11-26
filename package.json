@@ -4,7 +4,7 @@
   "description": "projet 3 OpenClassRooms",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./main.scss:./style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "repository": {
     "type": "git",
