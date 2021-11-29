@@ -1,0 +1,27 @@
+.border_shadow {
+    position: relative;
+    &:hover { cursor: pointer;
+        &::after {
+            opacity: 0.3;
+            @include Borderradius
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;  
+        left: 0;
+        background-color: darken($color-primary, 5);
+        opacity: 0;
+        transition: opacity 800ms;
+        @include Borderradius
+    }
+}
+.fa-heart {
+    font-size: 32px;
+    color: #9c47fc;
+    display: block;
+    background: -webkit-linear-gradient(#9c47fc, #356ad2);
+overflow: hidden;}
