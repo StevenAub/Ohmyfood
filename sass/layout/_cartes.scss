@@ -1,80 +1,82 @@
-.restaurants img{
-    width: 100%; max-height: 70%;
-   object-fit: cover;
-   border-radius: 15px 15px 0px 0px;
+/*Cartes Pages Index*/
+.restaurants img {
+    width: 100%;
+    max-height: 70%;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
 }
-.restaurants{
+.restaurants {
     background-color: $grey-c;
     height: 1250px;
     padding-top: 20px;
     margin-top: 40px;
+    &__cards {
+        min-width: 100%;
+        height: 1150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-.cards{
-    min-width: 100%;
-    height: 1150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-        a{
-            display: block;
-            background-color: white;
-            width: 90%;
-            height: 23%;
-            margin-top: 5%;
-            @include Borderradius;
-            @include boxshadow;
-                div{
-                    display: flex;
-                    justify-content: space-between;
-                    h3, p{
-                        margin:5% 0% 0% 5%;
-                    }
 
-                }
-        
-        }
+.restaurants a {
+    display: block;
+    background-color: white;
+    width: 90%;
+    height: 23%;
+    margin-top: 5%;
+    @include Borderradius;
+    @include boxshadow;
 }
-.column{
+.cards {
+    max-width: 100%;
+    max-height: 30%;
     display: flex;
-    flex-direction: column;
-    width:65%;
+    &__column {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__heart{
+        width: 30%;
+        display: flex;
+        justify-content: center; align-items: center
+    }
 }
-.menus img{
+/*Carte Pages Annexes*/
+.restaurants-name img {
     width: 100%;
     height: 250px;
 }
-.fondgrey{
+
+.menus-cards {
     background-color: $grey-f;
     border-radius: 50px 50px 0px 0px;
     margin-top: -45px;
     position: relative;
     padding-bottom: 100px;
+
+    &__aligned {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 35px;
+    }
 }
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 35px;
-}
-.box{
+.cards-style {
     @include Borderradius;
     @include boxshadow;
     background-color: white;
     width: 90%;
     margin: 4% 5% 0% 5%;
     display: flex;
-    
+
     align-items: flex-end;
-        div{
-            min-width: 70%;
-        }
+    div {
+        min-width: 70%;
+    }
 }
-.center{
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-.price{
-    padding-left: 30px
+
+.price {
+    padding-left: 30px;
 }

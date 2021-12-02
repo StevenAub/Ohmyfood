@@ -1,9 +1,10 @@
-.border_shadow {
+.functions__choice {
     position: relative;
-    &:hover { cursor: pointer;
+    &:hover {
+        cursor: pointer;
         &::after {
             opacity: 0.3;
-            @include Borderradius
+            @include Borderradius;
         }
     }
     &::after {
@@ -11,17 +12,40 @@
         position: absolute;
         top: 0;
         right: 0;
-        bottom: 0;  
+        bottom: 0;
         left: 0;
         background-color: darken($color-primary, 5);
         opacity: 0;
         transition: opacity 800ms;
-        @include Borderradius
+        @include Borderradius;
     }
 }
-.fa-heart {
-    font-size: 32px;
-    color: #9c47fc;
-    display: block;
-    background: -webkit-linear-gradient(#9c47fc, #356ad2);
-overflow: hidden;}
+.heart{
+    &__empty{
+        z-index: 2; position: absolute;
+        font-size: 30px;
+        opacity: 1;
+        background-color: white;
+        &:hover{
+            opacity: 0;
+         transition: opacity 1s;
+        }
+    }
+    &__full{
+        opacity: 1;
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+        z-index: 1;
+        &:hover{
+            z-index: 1;
+            opacity: 1;
+            content: "";
+            display: flex;
+            position: absolute;
+        }
+
+    }
+}

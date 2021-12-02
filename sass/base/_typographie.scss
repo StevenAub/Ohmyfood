@@ -28,14 +28,8 @@ h2{
 ::placeholder{
     font-weight: bold;
 }
-.far.fa-heart{
-    font-size: 30px;
-    font-weight: none;
-    display: flex;
-    align-items: center;
-    margin-right: 8%;
-}
-.fondgrey{
+
+.menus-cards{
     h1{
         font-size: 1.6rem;
         margin-left: 5%;
@@ -54,6 +48,14 @@ h2{
     p{
         font-size: .9rem; 
         margin: 4% 0px 20px 5%
+    }
+}
+.restaurants{
+    h3{
+        margin: 3% 0 3% 5%
+    }
+    p{
+        margin: 0% 0 5% 5%
     }
 }
 .bold{

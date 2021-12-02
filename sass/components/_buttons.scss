@@ -9,3 +9,10 @@ button{
     @include boxshadow;
     color:white
 }
+.btn-center{
+
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    
+}
