@@ -136,6 +136,22 @@ button {
   margin-top: 60px;
 }
 
+.new {
+  height: 32px;
+  width: 90px;
+  font-size: 0.9em;
+  color: #43af94;
+  background-color: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 1;
+  left: 71%;
+  margin-top: 4%;
+}
+
 /*Header sur toutes les pages*/
 header {
   display: flex;
@@ -227,6 +243,7 @@ li {
   max-height: 70%;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
+  z-index: 0;
 }
 
 .restaurants {
