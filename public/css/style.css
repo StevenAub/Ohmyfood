@@ -45,7 +45,7 @@ h2 {
   padding-bottom: 4px;
 }
 .menus-cards h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 20px 0px 0px 5%;
 }
 .menus-cards p {
@@ -64,6 +64,7 @@ h2 {
   font-weight: bold;
 }
 
+/*Animation menu Fonctionnement*/
 .functions__choice {
   position: relative;
 }
@@ -87,6 +88,7 @@ h2 {
   border-radius: 15px;
 }
 
+/*Animation coloration coeur hover*/
 .heart__empty {
   z-index: 2;
   position: absolute;
@@ -118,6 +120,68 @@ h2 {
   position: absolute;
 }
 
+/*Animation apparitions cartes progressive*/
+.cards-style {
+  animation: load 600ms backwards;
+}
+
+.cards-style--load1 {
+  animation-delay: 300ms;
+}
+
+.cards-style--load2 {
+  animation-delay: 600ms;
+}
+
+.cards-style--load3 {
+  animation-delay: 900ms;
+}
+
+.cards-style--load4 {
+  animation-delay: 1200ms;
+}
+
+.cards-style--load5 {
+  animation-delay: 1500ms;
+}
+
+.cards-style--load6 {
+  animation-delay: 1800ms;
+}
+
+.cards-style--load7 {
+  animation-delay: 2100ms;
+}
+
+.cards-style--load8 {
+  animation-delay: 2400ms;
+}
+
+.cards-style--load9 {
+  animation-delay: 2700ms;
+}
+
+.cards-style--load10 {
+  animation-delay: 3000ms;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    animation-delay: 0.5;
+  }
+  75% {
+    animation-delay: 0.75;
+  }
+  100% {
+    animation-delay: 1;
+  }
+}
 button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
@@ -148,7 +212,7 @@ button {
   border-radius: 3px;
   position: absolute;
   z-index: 1;
-  left: 71%;
+  left: 68%;
   margin-top: 4%;
 }
 
