@@ -20,32 +20,35 @@
         @include Borderradius;
     }
 }
-.heart{
-    &__empty{
-        z-index: 2; position: absolute;
-        font-size: 30px;
+.heart {
+    &__empty {
+        z-index: 2;
+        position: absolute;
+        font-size: 25px;
         opacity: 1;
         background-color: white;
-        &:hover{
+        &:hover {
             opacity: 0;
-         transition: opacity 1s;
+            transition: opacity 1s;
+        }
+        &--grey {
+            background: $grey-f;
         }
     }
-    &__full{
+    &__full {
         opacity: 1;
         background: -webkit-linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 30px;
+        font-size: 25px;
         z-index: 1;
-        &:hover{
+        &:hover {
             z-index: 1;
             opacity: 1;
             content: "";
             display: flex;
             position: absolute;
         }
-
     }
 }

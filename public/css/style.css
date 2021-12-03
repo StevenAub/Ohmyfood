@@ -90,7 +90,7 @@ h2 {
 .heart__empty {
   z-index: 2;
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
   opacity: 1;
   background-color: white;
 }
@@ -98,13 +98,16 @@ h2 {
   opacity: 0;
   transition: opacity 1s;
 }
+.heart__empty--grey {
+  background: #eaeaea;
+}
 .heart__full {
   opacity: 1;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 30px;
+  font-size: 25px;
   z-index: 1;
 }
 .heart__full:hover {
