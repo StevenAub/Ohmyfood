@@ -97,12 +97,33 @@
         opacity: 0.25;
     }
     50% {
-        animation-delay: 0.5;
+        opacity: 0.5;
     }
     75% {
-        animation-delay: 0.75;
+        opacity: 0.75;
     }
     100% {
-        animation-delay: 1;
+        opacity: 1;
     }
+}  
+/*Animation hover sur les plats*/
+.check{
+    background-color: rgb(153, 226, 208) ;
+    height: 100px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition-delay: 2s;
+    &__rotate{
+        font-size: 30px;
+        color: white;
+        transition: transform 2s;
+        
+    }
+}
+.cards-style:hover .check{
+    transform: translate(15%);
+}
+.cards-style:hover .check__rotate{
+   transform: rotate(360deg) ;
 }

@@ -31,22 +31,23 @@ h2{
 
 .menus-cards{
     h1{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin-left: 5%;
+        margin-bottom: 20px;
     }
     h2{
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: lighter;
         border-bottom: solid 3px $color-tertiary;
         width: 45px;
         padding-bottom: 4px;
     }
     h3{
-        font-size: 1rem;
+        font-size: .9rem;
         margin: 20px 0px 0px 5%;
     }
     p{
-        font-size: .9rem; 
+        font-size: .8rem; 
         margin: 4% 0px 20px 5%
     }
 }

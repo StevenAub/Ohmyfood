@@ -34,22 +34,23 @@ h2 {
 }
 
 .menus-cards h1 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-left: 5%;
+  margin-bottom: 20px;
 }
 .menus-cards h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: lighter;
   border-bottom: solid 3px #99E2D0;
   width: 45px;
   padding-bottom: 4px;
 }
 .menus-cards h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 20px 0px 0px 5%;
 }
 .menus-cards p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 4% 0px 20px 5%;
 }
 
@@ -173,15 +174,38 @@ h2 {
     opacity: 0.25;
   }
   50% {
-    animation-delay: 0.5;
+    opacity: 0.5;
   }
   75% {
-    animation-delay: 0.75;
+    opacity: 0.75;
   }
   100% {
-    animation-delay: 1;
+    opacity: 1;
   }
 }
+/*Animation hover sur les plats*/
+.check {
+  background-color: #99e2d0;
+  height: 100px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  transition-delay: 2s;
+}
+.check__rotate {
+  font-size: 30px;
+  color: white;
+  transition: transform 2s;
+}
+
+.cards-style:hover .check {
+  transform: translate(15%);
+}
+
+.cards-style:hover .check__rotate {
+  transform: rotate(360deg);
+}
+
 button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 50px;
@@ -377,15 +401,17 @@ li {
   background-color: white;
   width: 90%;
   margin: 4% 5% 0% 5%;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 .cards-style div {
-  min-width: 70%;
+  width: 80%;
 }
 
 .price {
-  padding-left: 30px;
+  padding-right: 20px;
 }
 
 /*Footer sur toutes les pages*/

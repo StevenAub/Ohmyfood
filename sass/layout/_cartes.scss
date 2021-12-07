@@ -70,13 +70,18 @@
     background-color: white;
     width: 90%;
     margin: 4% 5% 0% 5%;
+    overflow: hidden;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
+    
     div {
-        min-width: 70%;
+        width: 80%;
     }
+    
 }
 
+
 .price {
-    padding-left: 30px;
+    padding-right: 20px;
 }
