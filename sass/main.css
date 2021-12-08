@@ -267,15 +267,99 @@ i.fas.fa-check-circle {
           transform: rotate(360deg);
 }
 
-.cards-style:hover .price {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-.load {
-  border: 10px solid white;
+/*annimation loader*/
+.load_spinner {
+  border: 5px solid white;
+  border-top: 5px #9356DC solid;
+  border-right: 5px #FF79DA solid;
+  border-bottom: 5px #9356DC solid;
+  border-left: 5px #FF79DA solid;
+  border-radius: 50%;
   width: 100px;
   height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: spin 3s linear 3;
+          animation: spin 3s linear 3;
+  background-color: #9356DC;
+}
+
+.load_spinner--small {
+  width: 60px;
+  height: 60px;
+  animation: spin 3s reverse 3 linear;
+  background-color: #FF79DA;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.white {
+  background-color: white;
+  z-index: -2;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  -webkit-animation: disappears 4s;
+          animation: disappears 4s;
+}
+
+@-webkit-keyframes disappears {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  50% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+
+@keyframes disappears {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  50% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: -3;
+  }
 }
 
 button {

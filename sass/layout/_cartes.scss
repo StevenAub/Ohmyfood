@@ -38,11 +38,11 @@
         display: flex;
         flex-direction: column;
     }
-    &__heart{
+    &__heart {
         width: 30%;
         display: flex;
-        justify-content: center; 
-        align-items: center
+        justify-content: center;
+        align-items: center;
     }
 }
 /*Carte Pages Annexes*/
@@ -57,7 +57,6 @@
     margin-top: -45px;
     position: relative;
     padding-bottom: 100px;
-
     &__aligned {
         display: flex;
         justify-content: space-between;
@@ -69,19 +68,39 @@
     @include Borderradius;
     @include boxshadow;
     background-color: white;
-    width: 90%;
-    height: 85px;
     margin: 4% 5% 0% 5%;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-  
 }
 
-.price  {display: flex;
-    align-items: flex-end;
-    height: 100%;
-    position: relative;
-    justify-content: flex-end;
-    transition: all 1500ms
+.meal {position: relative;
+    display: flex;
+    gap: 30px;
+    transition: all 1100ms;
+    translate: 80px;
+    z-index: 1;
+    background-color: white;
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+}
+.check {
+        background-color: rgb(153, 226, 208);
+        min-width: 25%;
+        &__rotate {
+            text-align: center;
+            font-size:35px;
+            color: white;
+            transition: all 1100ms;
+            top: 30%;
+            position: relative;
+            width: 80px;
+        }
+}
+.test{
+    
 }
