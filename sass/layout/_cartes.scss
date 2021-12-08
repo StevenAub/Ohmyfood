@@ -41,7 +41,8 @@
     &__heart{
         width: 30%;
         display: flex;
-        justify-content: center; align-items: center
+        justify-content: center; 
+        align-items: center
     }
 }
 /*Carte Pages Annexes*/
@@ -69,19 +70,18 @@
     @include boxshadow;
     background-color: white;
     width: 90%;
+    height: 85px;
     margin: 4% 5% 0% 5%;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
-    
-    div {
-        width: 80%;
-    }
-    
+  
 }
 
-
-.price {
-    padding-right: 20px;
+.price  {display: flex;
+    align-items: flex-end;
+    height: 100%;
+    position: relative;
+    justify-content: flex-end;
+    transition: all 1500ms
 }

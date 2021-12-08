@@ -40,7 +40,7 @@
     &__full {
         opacity: 1;
         background: -webkit-linear-gradient($color-primary, $color-secondary);
-        background-clip: text;
+        background-clip: unset;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 25px;
@@ -57,73 +57,108 @@
 /*Animation apparitions cartes progressive*/
 .cards-style {
     animation: load 600ms backwards;
+    transition: 1500ms;
+    
 }
-.cards-style--load1 {
-    animation-delay: 300ms;
-}
-
-.cards-style--load2 {
-    animation-delay: 600ms;
-}
-.cards-style--load3 {
-    animation-delay: 900ms;
-}
-.cards-style--load4 {
-    animation-delay: 1200ms;
-}
-.cards-style--load5 {
-    animation-delay: 1500ms;
-}
-.cards-style--load6 {
-    animation-delay: 1800ms;
-}
-.cards-style--load7 {
-    animation-delay: 2100ms;
-}
-.cards-style--load8 {
-    animation-delay: 2400ms;
-}
-.cards-style--load9 {
-    animation-delay: 2700ms;
-}
-.cards-style--load10 {
-    animation-delay: 3000ms;
+@for $i from 1 to 10 {
+    .cards-style--load#{$i}{
+        animation-delay: $i* 300ms ;
+        
+    }
 }
 @keyframes load {
     0% {
         opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.75;
+        transform: translateY(30px)
     }
     100% {
         opacity: 1;
-    }
-}  
-/*Animation hover sur les plats*/
-.check{
-    background-color: rgb(153, 226, 208) ;
-    height: 100px;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    transition-delay: 2s;
-    &__rotate{
-        font-size: 30px;
-        color: white;
-        transition: transform 2s;
         
     }
 }
-.cards-style:hover .check{
-    transform: translate(15%);
+/*Animation hover sur les plats*/
+.check {
+    background-color: rgb(153, 226, 208);
+    height: 100%;
+    min-width: 25%;
+    overflow: hidden;
+    transition: all 1500ms;
+    translate: 110px;
+    &__rotate {
+        text-align: center;
+        font-size:35px;
+        color: white;
+        transition: all 2s;
+        top: 30%;
+        position: relative;
+    }
 }
-.cards-style:hover .check__rotate{
-   transform: rotate(360deg) ;
+.cards-style:hover .check {
+    transform: translateX(-120%);
+    display: inline;
+}
+.cards-style:hover .check__rotate {
+    transform: rotate(360deg);
+}
+.cards-style:hover .price{
+    transform: translateX(-100%)
+}
+/*annimation loader*/
+
+    
+.load_spinner{
+    border: 5px solid white ;
+    border-top: 5px $color-primary solid;
+    border-right: 5px $color-secondary solid;
+    border-bottom: 5px $color-primary solid;
+    border-left: 5px $color-secondary solid;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0;right: 0;
+    animation: spin 3s linear 3;
+    background-color: $color-primary;
+    &--small{
+        
+        width: 60px;
+        height: 60px;
+        animation: spin 3s reverse 3 linear;
+        background-color: $color-secondary;
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+.white{
+    background-color: white;
+    z-index: -2;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    animation: disappears 4s ;
+}
+@keyframes disappears {
+    0%{
+        opacity: 1;
+        z-index: 3;
+    }
+    50%{
+        opacity: 1;
+        z-index: 3;
+    }
+    100%{
+        opacity: 0;
+        z-index: -3;
+    }
 }
