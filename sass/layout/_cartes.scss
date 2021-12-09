@@ -8,14 +8,14 @@
 }
 .restaurants {
     background-color: $grey-c;
-    height: 1250px;
+    height: 1100px;
     padding-top: 20px;
     margin-top: 40px;
     &__cards {
         min-width: 100%;
-        height: 1150px;
+        height: 1000px;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap-reverse;
         align-items: center;
     }
 }
@@ -24,8 +24,9 @@
     display: block;
     background-color: white;
     width: 90%;
-    height: 23%;
-    margin-top: 5%;
+    margin-left: 5%;
+    height: 230px;
+    margin-top: 3%;
     @include Borderradius;
     @include boxshadow;
 }
