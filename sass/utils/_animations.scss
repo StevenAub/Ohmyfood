@@ -79,6 +79,8 @@
 /*Animation hover sur les plats*/
 .cards-style:hover .meal {
     transform: translateX(-60%);
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .cards-style:hover .check__rotate {
     transform: rotate(360deg);

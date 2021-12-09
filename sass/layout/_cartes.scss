@@ -72,6 +72,7 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .meal {position: relative;
@@ -79,8 +80,8 @@
     gap: 30px;
     transition: all 1100ms;
     translate: 80px;
-    z-index: 1;
     background-color: white;
+    z-index: 2;
     &__price {
         display: flex;
         align-items: flex-end;
@@ -100,7 +101,4 @@
             position: relative;
             width: 80px;
         }
-}
-.test{
-    
 }

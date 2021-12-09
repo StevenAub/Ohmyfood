@@ -10,3 +10,21 @@ body {
 li {
     list-style: none;
 }
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .restaurants{max-width: 90%;
+        max-height: 700px;
+    }
+    
+    
+    .restaurants__cards{
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            max-width: 45%;
+        }
+    }
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+}

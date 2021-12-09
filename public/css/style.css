@@ -33,10 +33,6 @@ h2 {
   font-weight: bold;
 }
 
-.menus-cards {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 .menus-cards h1 {
   font-size: 1.5rem;
   margin-left: 5%;
@@ -53,18 +49,16 @@ h2 {
 .menus-cards h3 {
   font-size: 0.9rem;
   margin: 20px 0px 0px 5%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menus-cards p {
   font-size: 0.8rem;
   margin: 4% 0px 20px 5%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .restaurants h3 {
   margin: 3% 0 3% 5%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .restaurants p {
   margin: 0% 0 5% 5%;
@@ -188,6 +182,8 @@ i.fas.fa-check-circle {
 /*Animation hover sur les plats*/
 .cards-style:hover .meal {
   transform: translateX(-60%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .cards-style:hover .check__rotate {
@@ -373,6 +369,22 @@ li {
   list-style: none;
 }
 
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .restaurants {
+    max-width: 90%;
+    max-height: 700px;
+  }
+
+  .restaurants__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurants__cards a {
+    max-width: 45%;
+  }
+}
+/*Version Desktop*/
 /*Cartes Pages Index*/
 .restaurants img {
   width: 100%;
@@ -459,8 +471,8 @@ li {
   gap: 30px;
   transition: all 1100ms;
   translate: 80px;
-  z-index: 1;
   background-color: white;
+  z-index: 2;
 }
 .meal__price {
   display: flex;
