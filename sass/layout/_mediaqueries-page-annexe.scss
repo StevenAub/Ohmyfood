@@ -1,0 +1,33 @@
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+    header{
+        
+        
+        img{
+            width: 20%;
+            object-fit: cover;
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+    
+    .menus-cards__aligned{
+        
+        h1{
+            text-align: center;
+        }
+    
+    }
+    .menus-choice{
+        display: flex;
+        justify-content: space-around;        
+    }
+    .btn-center{
+        margin: auto;
+        max-width:30%;
+    }
+}

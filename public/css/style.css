@@ -274,14 +274,164 @@ button {
   background-color: #99e2d0;
   display: flex;
   align-items: center;
+  position: absolute;
   justify-content: center;
   border-radius: 3px;
-  position: absolute;
-  z-index: 1;
+  float: right;
+  z-index: 2;
   left: 68%;
   margin-top: 4%;
 }
 
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+  body {
+    background-color: #f6f6f6;
+  }
+
+  /*Header*/
+  header img {
+    width: 30%;
+    margin-top: 30px;
+  }
+
+  /*Nav*/
+  .nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    margin: auto;
+    height: 400px;
+    gap: 3%;
+    margin-top: 50px;
+  }
+  .nav nav i {
+    font-size: 25px;
+    color: #9356DC;
+    margin-right: 30px;
+  }
+  .nav .maps {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+    background-color: white;
+  }
+
+  input {
+    height: 80%;
+  }
+
+  .functions__choice {
+    background-color: #f6f6f6;
+    box-shadow: none;
+    border: 0.1px solid #eaeaea;
+  }
+
+  .functions-column {
+    flex: 1;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  }
+
+  /*Cartes Restaurant*/
+  section.restaurants {
+    background-color: #f6f6f6;
+    max-width: 80%;
+    margin: 50px auto;
+    max-height: 680px;
+  }
+  section.restaurants h2 {
+    margin: 0 0 0 2.5%;
+  }
+
+  .restaurants__cards {
+    display: block;
+    max-height: 600px;
+    flex-direction: row;
+  }
+  .restaurants__cards a {
+    max-width: 45%;
+    background-color: #eaeaea;
+    min-height: 260px;
+  }
+
+  .new {
+    z-index: 1;
+    position: absolute;
+  }
+
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 19px;
+  }
+  footer .logo p {
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+  }
+}
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  /*Header*/
+  /*Nav*/
+  .functions-column {
+    text-align: center;
+  }
+  .functions-column h2 {
+    margin: 30px 0px 0px 0px;
+  }
+
+  .functions {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  /*Cartes Restaurant*/
+  .restaurants {
+    width: 100%;
+    max-height: 670px;
+  }
+
+  .restaurants__cards {
+    display: block;
+    width: 90%;
+    max-height: 550px;
+    flex-direction: row;
+  }
+  .restaurants__cards a {
+    max-width: 45%;
+  }
+
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 17px;
+  }
+  footer .logo p {
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+  }
+}
 /*Header sur toutes les pages*/
 header {
   display: flex;
@@ -367,159 +517,13 @@ li {
   list-style: none;
 }
 
-/*Version Desktop*/
-@media all and (min-width: 992px) {
-  body {
-    background-color: #f6f6f6;
-  }
-
-  /*Header*/
-  header img {
-    width: 30%;
-    margin-top: 30px;
-  }
-
-  /*Nav*/
-  .nav {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 90%;
-    margin: auto;
-    height: 400px;
-    gap: 3%;
-    margin-top: 50px;
-  }
-  .nav nav i {
-    font-size: 25px;
-    color: #9356DC;
-    margin-right: 30px;
-  }
-
-  input {
-    height: 80%;
-  }
-
-  .maps {
-    background-color: white;
-    flex: 1;
-    border-radius: 15px;
-    background-color: white;
-    overflow: hidden;
-    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
-  }
-
-  .functions__choice {
-    background-color: #f6f6f6;
-    box-shadow: none;
-    border: 0.1px solid #eaeaea;
-  }
-
-  .functions-column {
-    flex: 1;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
-  }
-
-  /*Cartes Restaurant*/
-  section.restaurants {
-    background-color: #f6f6f6;
-    max-width: 80%;
-    margin: 50px auto;
-    max-height: 680px;
-  }
-  section.restaurants h2 {
-    margin: 0 0 0 2.5%;
-  }
-
-  .restaurants__cards {
-    display: block;
-    max-height: 600px;
-    flex-direction: row;
-  }
-  .restaurants__cards a {
-    max-width: 45%;
-    background-color: #eaeaea;
-    min-height: 260px;
-  }
-
-  /*Footer*/
-  footer {
-    display: flex;
-    flex-direction: column;
-  }
-  footer ul {
-    display: flex;
-  }
-  footer ul li {
-    flex: 1;
-    text-align: center;
-    font-size: 19px;
-  }
-  footer .logo p {
-    font-size: 30px;
-    text-align: center;
-    margin: 0px;
-  }
-}
-/*Version Tablette*/
-@media all and (min-width: 768px) and (max-width: 991px) {
-  /*Header*/
-  /*Nav*/
-  .functions-column {
-    text-align: center;
-  }
-  .functions-column h2 {
-    margin: 30px 0px 0px 0px;
-  }
-
-  .functions {
-    width: 50%;
-    margin-left: 25%;
-  }
-
-  /*Cartes Restaurant*/
-  .restaurants {
-    width: 100%;
-    max-height: 670px;
-  }
-
-  .restaurants__cards {
-    display: block;
-    width: 90%;
-    max-height: 550px;
-    flex-direction: row;
-  }
-  .restaurants__cards a {
-    max-width: 45%;
-  }
-
-  /*Footer*/
-  footer {
-    display: flex;
-    flex-direction: column;
-  }
-  footer ul {
-    display: flex;
-  }
-  footer ul li {
-    flex: 1;
-    text-align: center;
-    font-size: 17px;
-  }
-  footer .logo p {
-    font-size: 30px;
-    text-align: center;
-    margin: 0px;
-  }
-}
 /*Cartes Pages Index*/
 .restaurants img {
-  width: 100%;
   max-height: 70%;
   object-fit: cover;
+  width: 100%;
   border-radius: 15px 15px 0px 0px;
-  z-index: 0;
+  position: relative;
 }
 
 .restaurants {
@@ -532,7 +536,7 @@ li {
   min-width: 100%;
   height: 1000px;
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -543,6 +547,8 @@ li {
   margin: auto;
   height: 230px;
   margin-top: 3%;
+  padding-bottom: 7px;
+  overflow: hidden;
   border-radius: 15px;
   box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
 }
@@ -653,6 +659,32 @@ footer i {
 .fas.fa-hands-helping {
   font-size: 12px;
   max-width: 10px;
+}
+
+/*Version Tablette*/
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+  header img {
+    width: 20%;
+    object-fit: cover;
+  }
+  header i {
+    font-size: 30px;
+  }
+
+  .menus-cards__aligned h1 {
+    text-align: center;
+  }
+
+  .menus-choice {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn-center {
+    margin: auto;
+    max-width: 30%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

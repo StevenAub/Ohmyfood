@@ -24,20 +24,19 @@ header img {
             color: $color-primary;
             margin-right: 30px;
         }
-    }
+    }.maps {
+    
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    @include boxshadow;background-color: white;
+}
 }
 input {
     height: 80%;
 }
 
-.maps {
-    background-color: white;
-    flex: 1;
-    border-radius: 15px;
-    background-color: white;
-    overflow: hidden;
-    @include boxshadow;
-}
+
 
 .functions__choice {
     background-color: $grey-c;
@@ -73,6 +72,10 @@ input {
                 min-height: 260px;
             }
         }
+    }
+    .new{
+        z-index:1;
+        position: absolute;
     }
     /*Footer*/
     footer {

@@ -25,10 +25,11 @@ button{
     background-color: rgb(153, 226, 208);
     display: flex;
     align-items: center;
+    position: absolute;
     justify-content: center;
     border-radius: 3px;
-    position:absolute;
-    z-index: 1;
+    float: right;
+    z-index: 2;
     left: 68%;
     margin-top: 4%;
     }
