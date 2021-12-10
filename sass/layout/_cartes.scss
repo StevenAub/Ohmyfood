@@ -24,7 +24,7 @@
     display: block;
     background-color: white;
     width: 90%;
-    margin-left: 5%;
+    margin: auto;
     height: 230px;
     margin-top: 3%;
     @include Borderradius;
@@ -73,10 +73,10 @@
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    
 }
 
-.meal {position: relative;
+.meal {
+    position: relative;
     display: flex;
     gap: 30px;
     transition: all 1100ms;
@@ -87,19 +87,27 @@
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-
     }
 }
 .check {
-        background-color: rgb(153, 226, 208);
-        min-width: 25%;
-        &__rotate {
-            text-align: center;
-            font-size:35px;
-            color: white;
-            transition: all 1100ms;
-            top: 30%;
-            position: relative;
-            width: 80px;
-        }
+    background-color: rgb(153, 226, 208);
+    min-width: 25%;
+    &__rotate {
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        transition: all 1100ms;
+        top: 30%;
+        position: relative;
+        width: 80px;
+    }
+}
+
+/*MEDIAQUERIES PAGE INDEX*/
+
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
 }

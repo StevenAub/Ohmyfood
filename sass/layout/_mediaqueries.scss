@@ -1,0 +1,150 @@
+/*Version Desktop*/
+@media all and (min-width: 992px){
+body {
+    background-color: $grey-c;
+}
+/*Header*/
+header img {
+    width: 30%;
+    margin-top: 30px;
+}
+
+/*Nav*/
+.nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    margin: auto;
+    height: 400px;
+    gap: 3%;
+    margin-top: 50px;
+    nav {
+        i {
+            font-size: 25px;
+            color: $color-primary;
+            margin-right: 30px;
+        }
+    }
+}
+input {
+    height: 80%;
+}
+
+.maps {
+    background-color: white;
+    flex: 1;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    @include boxshadow;
+}
+
+.functions__choice {
+    background-color: $grey-c;
+    box-shadow: none;
+    border: 0.1px solid $grey-f;
+}
+.functions-column {
+    flex: 1;
+    background-color: white;
+    border-radius: 15px;
+    @include boxshadow;
+}
+/*Cartes Restaurant*/
+
+    section.restaurants {
+        background-color: $grey-c;
+        max-width: 80%;
+        margin: 50px auto;
+        max-height: 680px;
+        h2 {
+            margin: 0 0 0 2.5%;
+        }
+    }
+
+    .restaurants {
+        &__cards {
+            display: block;
+            max-height: 600px;
+            flex-direction: row;
+            a {
+                max-width: 45%;
+                background-color: $grey-f;
+                min-height: 260px;
+            }
+        }
+    }
+    /*Footer*/
+    footer {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            display: flex;
+            li {
+                flex: 1;
+                text-align: center;
+                font-size: 19px;
+            }
+        }
+        .logo p {
+            font-size: 30px;
+            text-align: center;
+            margin: 0px;
+        }
+    }
+}
+
+
+
+
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+    /*Header*/
+
+    /*Nav*/
+    .functions-column {
+        text-align: center;
+        h2 {
+            margin: 30px 0px 0px 0px;
+        }
+    }
+    .functions {
+        width: 50%;
+        margin-left: 25%;
+    }
+    /*Cartes Restaurant*/
+    .restaurants {
+        width: 100%;
+        max-height: 670px;
+    }
+
+    .restaurants__cards {
+        display: block;
+        width: 90%;
+        max-height: 550px;
+        flex-direction: row;
+        a {
+            max-width: 45%;
+        }
+    }
+    /*Footer*/
+    footer {
+        display: flex;
+        flex-direction: column;
+        ul {
+            display: flex;
+            li {
+                flex: 1;
+                text-align: center;
+                font-size: 17px;
+            }
+        }
+        .logo p {
+            font-size: 30px;
+            text-align: center;
+            margin: 0px;
+        }
+    }
+}
+

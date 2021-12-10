@@ -367,46 +367,19 @@ li {
   list-style: none;
 }
 
-/*Version Tablette*/
-@media all and (min-width: 768px) and (max-width: 991px) {
-  .functions-column {
-    text-align: center;
-  }
-  .functions-column h2 {
-    margin: 30px 0px 0px 0px;
-  }
-
-  .functions {
-    width: 50%;
-    margin-left: 25%;
-  }
-
-  .restaurants {
-    width: 100%;
-    max-height: 670px;
-  }
-
-  .restaurants__cards {
-    display: block;
-    width: 90%;
-    max-height: 550px;
-    flex-direction: row;
-  }
-  .restaurants__cards a {
-    max-width: 40%;
-  }
-
-  footer {
-    min-height: 250px;
-  }
-}
 /*Version Desktop*/
 @media all and (min-width: 992px) {
+  body {
+    background-color: #f6f6f6;
+  }
+
+  /*Header*/
   header img {
     width: 30%;
     margin-top: 30px;
   }
 
+  /*Nav*/
   .nav {
     display: flex;
     flex-direction: row-reverse;
@@ -428,33 +401,87 @@ li {
 
   .maps {
     background-color: white;
-    width: 50%;
-    border: 0.1px solid #9356DC;
+    flex: 1;
     border-radius: 15px;
-    background-color: #f6f6f6;
+    background-color: white;
     overflow: hidden;
     box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
   }
 
   .functions__choice {
-    background-color: white;
+    background-color: #f6f6f6;
     box-shadow: none;
     border: 0.1px solid #eaeaea;
   }
 
   .functions-column {
-    min-width: 50%;
-    background-color: #f6f6f6;
+    flex: 1;
+    background-color: white;
     border-radius: 15px;
     box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
   }
 
+  /*Cartes Restaurant*/
+  section.restaurants {
+    background-color: #f6f6f6;
+    max-width: 80%;
+    margin: 50px auto;
+    max-height: 680px;
+  }
+  section.restaurants h2 {
+    margin: 0 0 0 2.5%;
+  }
+
+  .restaurants__cards {
+    display: block;
+    max-height: 600px;
+    flex-direction: row;
+  }
+  .restaurants__cards a {
+    max-width: 45%;
+    background-color: #eaeaea;
+    min-height: 260px;
+  }
+
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 19px;
+  }
+  footer .logo p {
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+  }
+}
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  /*Header*/
+  /*Nav*/
+  .functions-column {
+    text-align: center;
+  }
+  .functions-column h2 {
+    margin: 30px 0px 0px 0px;
+  }
+
+  .functions {
+    width: 50%;
+    margin-left: 25%;
+  }
+
+  /*Cartes Restaurant*/
   .restaurants {
-    width: 90%;
-    margin: auto;
-    border-radius: 15px;
+    width: 100%;
     max-height: 670px;
-    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
   }
 
   .restaurants__cards {
@@ -464,7 +491,26 @@ li {
     flex-direction: row;
   }
   .restaurants__cards a {
-    max-width: 40%;
+    max-width: 45%;
+  }
+
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer ul li {
+    flex: 1;
+    text-align: center;
+    font-size: 17px;
+  }
+  footer .logo p {
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
   }
 }
 /*Cartes Pages Index*/
@@ -494,7 +540,7 @@ li {
   display: block;
   background-color: white;
   width: 90%;
-  margin-left: 5%;
+  margin: auto;
   height: 230px;
   margin-top: 3%;
   border-radius: 15px;
@@ -577,15 +623,18 @@ li {
   width: 80px;
 }
 
+/*MEDIAQUERIES PAGE INDEX*/
+/*Version Tablette*/
+/*Version Desktop*/
 /*Footer sur toutes les pages*/
 footer {
-  height: 190px;
+  min-height: auto;
   background-color: #353535;
   color: white;
+  padding: 25px 0px;
 }
 footer ul {
-  margin: 0% 0% 0% 5%;
-  padding: 5% 0% 0% 0px;
+  margin: 0;
 }
 footer ul li {
   margin: 2% 0%;
@@ -593,6 +642,7 @@ footer ul li {
 footer .logo {
   font-size: 20px;
   padding-bottom: 2%;
+  margin-left: 40px;
 }
 
 footer i {
