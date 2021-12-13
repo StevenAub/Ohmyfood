@@ -34,12 +34,12 @@ h2 {
 }
 
 .menus-cards h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-left: 5%;
   margin-bottom: 0px;
 }
 .menus-cards h2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   border-bottom: solid 3px #99E2D0;
   width: 45px;
@@ -47,14 +47,16 @@ h2 {
   margin: 25px 5%;
 }
 .menus-cards h3 {
-  font-size: 0.9rem;
-  margin: 20px 0px 0px 5%;
-}
-.menus-cards p {
-  font-size: 0.8rem;
-  margin: 4% 0px 20px 5%;
+  font-size: 0.8em;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus-cards p {
+  font-size: 0.7em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .restaurants h3 {
@@ -180,14 +182,6 @@ i.fas.fa-check-circle {
   }
 }
 /*Animation hover sur les plats*/
-.cards-style:hover .meal {
-  transform: translateX(-60%);
-}
-
-.cards-style:hover .check__rotate {
-  transform: rotate(360deg);
-}
-
 /*annimation loader*/
 .load_spinner {
   border: 5px solid white;
@@ -212,6 +206,13 @@ i.fas.fa-check-circle {
   height: 60px;
   animation: spin 3s reverse 3 linear;
   background-color: #FF79DA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load_spinner--small img {
+  height: 60px;
+  animation: none;
 }
 
 @keyframes spin {
@@ -277,9 +278,8 @@ button {
   position: absolute;
   justify-content: center;
   border-radius: 3px;
-  float: right;
-  z-index: 2;
-  left: 68%;
+  z-index: 1;
+  right: 5%;
   margin-top: 4%;
 }
 
@@ -555,6 +555,7 @@ footer a {
   overflow: hidden;
   border-radius: 15px;
   box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  position: relative;
 }
 
 .cards {
@@ -580,6 +581,10 @@ footer a {
   height: 250px;
 }
 
+.menus-choice {
+  min-width: 90%;
+}
+
 .menus-cards {
   background-color: #eaeaea;
   border-radius: 50px 50px 0px 0px;
@@ -595,42 +600,51 @@ footer a {
 }
 
 .cards-style {
+  display: flex;
+  background-color: white;
   border-radius: 15px;
-  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
-  background-color: white;
-  margin: 4% 5% 0% 5%;
   overflow: hidden;
-  display: flex;
-  justify-content: space-between;
+  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  max-width: 90%;
+  margin: 3% 5%;
+  padding-left: 3%;
 }
-
-.meal {
-  position: relative;
-  display: flex;
-  gap: 30px;
-  transition: all 1100ms;
-  translate: 80px;
-  background-color: white;
-  z-index: 2;
+.cards-style__meal {
+  overflow: hidden;
+  width: 80%;
 }
-.meal__price {
+.cards-style__price {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  margin: 30px 20px 10px auto;
 }
 
-.check {
-  background-color: #99e2d0;
-  min-width: 25%;
+.cards-style__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border-radius: 0 15px 15px 0;
+  margin-right: -70px;
+  background-color: #99E2D0;
+  transition: all 1s;
 }
-.check__rotate {
+
+.cards-style__rotate {
   text-align: center;
   font-size: 35px;
   color: white;
   transition: all 1100ms;
-  top: 30%;
   position: relative;
   width: 80px;
+}
+
+.cards-style:hover .cards-style__check {
+  margin-right: 0;
+}
+
+.cards-style:hover .cards-style__rotate {
+  transform: rotate(360deg);
 }
 
 /*MEDIAQUERIES PAGE INDEX*/
@@ -666,6 +680,46 @@ footer i {
 }
 
 /*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: #eaeaea;
+  }
+
+  header i {
+    font-size: 28px;
+  }
+  header img {
+    width: 28%;
+  }
+
+  .restaurants-name img {
+    height: 400px;
+  }
+
+  .menus-choice__flex {
+    width: 80%;
+    margin: auto;
+  }
+
+  .menus-cards {
+    width: 80%;
+    margin: -5% auto 0 auto;
+    border: 1px solid #9356DC;
+  }
+  .menus-cards__aligned {
+    width: 60%;
+    margin: auto;
+    background-color: #eaeaea;
+  }
+  .menus-cards__aligned .cards__heart {
+    justify-content: flex-end;
+    margin-right: 40px;
+  }
+
+  button {
+    width: 40%;
+  }
+}
 /*Version Desktop*/
 @media all and (min-width: 992px) {
   body {
@@ -674,7 +728,7 @@ footer i {
   }
 
   header img {
-    width: 15%;
+    width: 18%;
     object-fit: cover;
   }
   header i {
@@ -686,9 +740,11 @@ footer i {
     justify-content: center;
   }
   .restaurants-name img {
-    width: 60%;
+    max-width: 650px;
+    height: 350px;
     border-radius: 50%;
     z-index: 1;
+    margin-top: 40px;
   }
 
   .menus-cards {
@@ -720,14 +776,22 @@ footer i {
     width: 60%;
     margin: auto;
   }
-  .menus-choice .meal {
-    background-color: white;
+  .menus-choice__flex {
+    flex: 1;
   }
 
   .btn-center {
     margin: auto;
     max-width: 45%;
     margin-top: 50px;
+  }
+
+  footer {
+    min-height: 100px;
+  }
+  footer ul {
+    font-size: 0.8em;
+    height: 50px;
   }
 }
 

@@ -31,13 +31,13 @@ h2{
 
 .menus-cards{
     h1{
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin-left: 5%;
         margin-bottom: 0px;
     }
     h2{
         
-        font-size: 1rem;
+        font-size: .9rem;
         font-weight: lighter;
         border-bottom: solid 3px $color-tertiary;
         width: 45px;
@@ -45,15 +45,17 @@ h2{
         margin:25px 5%
     }
     h3{
-        font-size: .9rem;
-        margin: 20px 0px 0px 5%;
+        font-size: .8em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         
     }
     p{  
-        font-size: .8rem; 
-        margin: 4% 0px 20px 5%;
+        font-size: .7em; 
         white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 .restaurants{

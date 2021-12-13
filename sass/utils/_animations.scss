@@ -1,149 +1,148 @@
-/*Animation menu Fonctionnement*/
-.functions__choice {
-    position: relative;
-    &:hover {
-        cursor: pointer;
+    /*Animation menu Fonctionnement*/
+    .functions__choice {
+        position: relative;
+        &:hover {
+            cursor: pointer;
+            &::after {
+                opacity: 0.3;
+                @include Borderradius;
+            }
+        }
         &::after {
-            opacity: 0.3;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: darken($color-primary, 5);
+            opacity: 0;
+            transition: opacity 800ms;
             @include Borderradius;
         }
     }
-    &::after {
-        content: "";
+    /*Animation coloration coeur hover*/
+    .heart {
+        &__empty {
+            z-index: 2;
+            position: absolute;
+            font-size: 25px;
+            opacity: 1;
+            background-color: white;
+            &:hover {
+                opacity: 0;
+                transition: opacity 1s;
+            }
+            &--grey {
+                background: $grey-f;
+            }
+        }
+        &__full {
+            opacity: 1;
+            background: -webkit-linear-gradient($color-primary, $color-secondary);
+            background-clip: unset;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 25px;
+            z-index: 1;
+            &:hover {
+                z-index: 1;
+                opacity: 1;
+                content: "";
+                display: flex;
+                position: absolute;
+                
+                
+            }
+        }
+    }
+    /*Animation apparitions cartes progressive*/
+    .cards-style {
+        animation: load 600ms backwards;
+        transition: 1500ms;
+    }
+    @for $i from 1 to 10 {
+        .cards-style--load#{$i} {
+            animation-delay: $i * 300ms;
+        }   
+    }
+    @keyframes load {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    /*Animation hover sur les plats*/
+  
+    
+    /*annimation loader*/
+    
+    .load_spinner {
+        border: 5px solid white;
+        border-top: 5px $color-primary solid;
+        border-right: 5px $color-secondary solid;
+        border-bottom: 5px $color-primary solid;
+        border-left: 5px $color-secondary solid;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
         position: absolute;
         top: 0;
-        right: 0;
-        bottom: 0;
         left: 0;
-        background-color: darken($color-primary, 5);
-        opacity: 0;
-        transition: opacity 800ms;
-        @include Borderradius;
-    }
-}
-/*Animation coloration coeur hover*/
-.heart {
-    &__empty {
-        z-index: 2;
-        position: absolute;
-        font-size: 25px;
-        opacity: 1;
-        background-color: white;
-        &:hover {
-            opacity: 0;
-            transition: opacity 1s;
-        }
-        &--grey {
-            background: $grey-f;
-        }
-    }
-    &__full {
-        opacity: 1;
-        background: -webkit-linear-gradient($color-primary, $color-secondary);
-        background-clip: unset;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 25px;
-        z-index: 1;
-        &:hover {
-            z-index: 1;
-            opacity: 1;
-            content: "";
+        bottom: 0;
+        right: 0;
+        animation: spin 3s linear 3;
+        background-color: $color-primary;
+        &--small {
+            width: 60px;
+            height: 60px;
+            animation: spin 3s reverse 3 linear;
+            background-color: $color-secondary;
             display: flex;
-            position: absolute;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 60px;
+                animation: none;
+            }
+            
         }
     }
-}
-/*Animation apparitions cartes progressive*/
-.cards-style {
-    animation: load 600ms backwards;
-    transition: 1500ms;
     
-}
-@for $i from 1 to 10 {
-    .cards-style--load#{$i}{
-        animation-delay: $i* 300ms ;
-        
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(360deg);
+            opacity: 0;
+        }
     }
-}
-@keyframes load {
-    0% {
+    .white {
+        background-color: white;
+        z-index: -2;
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
         opacity: 0;
-        transform: translateY(30px)
+        animation: disappears 4s;
     }
-    100% {
-        opacity: 1;
-        
+    @keyframes disappears {
+        0% {
+            opacity: 1;
+            z-index: 3;
+        }
+        50% {
+            opacity: 1;
+            z-index: 3;
+        }
+        100% {
+            opacity: 0;
+            z-index: -3;
+        }
     }
-}
-/*Animation hover sur les plats*/
-.cards-style:hover .meal {
-    transform: translateX(-60%);
-}
-.cards-style:hover .check__rotate {
-    transform: rotate(360deg);
-}
-
-
-
-
-
-/*annimation loader*/
-
-    
-.load_spinner{
-    border: 5px solid white ;
-    border-top: 5px $color-primary solid;
-    border-right: 5px $color-secondary solid;
-    border-bottom: 5px $color-primary solid;
-    border-left: 5px $color-secondary solid;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0;right: 0;
-    animation: spin 3s linear 3;
-    background-color: $color-primary;
-    &--small{
-        
-        width: 60px;
-        height: 60px;
-        animation: spin 3s reverse 3 linear;
-        background-color: $color-secondary;
-    }
-}
-
-@keyframes spin {
-    0%{
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-    100%{
-        transform: rotate(360deg);
-        opacity: 0;
-    }
-}
-.white{
-    background-color: white;
-    z-index: -2;
-    position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    animation: disappears 4s ;
-}
-@keyframes disappears {
-    0%{
-        opacity: 1;
-        z-index: 3;
-    }
-    50%{
-        opacity: 1;
-        z-index: 3;
-    }
-    100%{
-        opacity: 0;
-        z-index: -3;
-    }
-}

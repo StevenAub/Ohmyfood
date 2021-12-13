@@ -7,8 +7,11 @@ button{
     border: none;
     cursor: pointer;
     @include boxshadow;
-    color:white
+    color:white;
+    
 }
+
+
 .btn-center{
 
         display: flex;
@@ -16,6 +19,7 @@ button{
         margin-top: 60px;
     
 }
+
 .new
 {
     height: 32px;
@@ -28,8 +32,7 @@ button{
     position: absolute;
     justify-content: center;
     border-radius: 3px;
-    float: right;
-    z-index: 2;
-    left: 68%;
+    z-index: 1;
+    right: 5%;
     margin-top: 4%;
     }
