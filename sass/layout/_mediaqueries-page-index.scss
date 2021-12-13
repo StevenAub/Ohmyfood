@@ -1,55 +1,54 @@
 /*Version Desktop*/
-@media all and (min-width: 992px){
-body {
-    background-color: $grey-c;
-}
-/*Header*/
-header img {
-    width: 30%;
-    margin-top: 30px;
-}
+@media all and (min-width: 992px) {
+    body {
+        background-color: $grey-c;
+    }
+    /*Header*/
+    header img {
+        width: 30%;
+        margin-top: 30px;
+    }
 
-/*Nav*/
-.nav {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 90%;
-    margin: auto;
-    height: 400px;
-    gap: 3%;
-    margin-top: 50px;
-    nav {
-        i {
-            font-size: 25px;
-            color: $color-primary;
-            margin-right: 30px;
+    /*Nav*/
+    .nav {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        margin: auto;
+        height: 400px;
+        gap: 3%;
+        margin-top: 50px;
+        nav {
+            i {
+                font-size: 25px;
+                color: $color-primary;
+                margin-right: 30px;
+            }
         }
-    }.maps {
-    
-    flex: 1;
-    border-radius: 15px;
-    overflow: hidden;
-    @include boxshadow;background-color: white;
-}
-}
-input {
-    height: 80%;
-}
+        .maps {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            @include boxshadow;
+            background-color: white;
+        }
+    }
+    input {
+        height: 80%;
+    }
 
-
-
-.functions__choice {
-    background-color: $grey-c;
-    box-shadow: none;
-    border: 0.1px solid $grey-f;
-}
-.functions-column {
-    flex: 1;
-    background-color: white;
-    border-radius: 15px;
-    @include boxshadow;
-}
-/*Cartes Restaurant*/
+    .functions__choice {
+        background-color: $grey-c;
+        box-shadow: none;
+        border: 0.1px solid $grey-f;
+    }
+    .functions-column {
+        flex: 1;
+        background-color: white;
+        border-radius: 15px;
+        @include boxshadow;
+    }
+    /*Cartes Restaurant*/
 
     section.restaurants {
         background-color: $grey-c;
@@ -73,8 +72,8 @@ input {
             }
         }
     }
-    .new{
-        z-index:1;
+    .new {
+        z-index: 1;
         position: absolute;
     }
     /*Footer*/
@@ -97,9 +96,6 @@ input {
         }
     }
 }
-
-
-
 
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -150,4 +146,3 @@ input {
         }
     }
 }
-

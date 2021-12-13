@@ -503,7 +503,6 @@ input {
 }
 
 body {
-  min-width: 100%;
   margin: 0px;
 }
 
@@ -515,6 +514,11 @@ body {
 
 li {
   list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }
 
 /*Cartes Pages Index*/
@@ -664,26 +668,66 @@ footer i {
 /*Version Tablette*/
 /*Version Desktop*/
 @media all and (min-width: 992px) {
+  body {
+    margin: auto;
+    background-color: #eaeaea;
+  }
+
   header img {
-    width: 20%;
+    width: 15%;
     object-fit: cover;
   }
   header i {
     font-size: 30px;
   }
 
+  .restaurants-name {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurants-name img {
+    width: 60%;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .menus-cards {
+    background-color: #eaeaea;
+  }
+  .menus-cards__aligned {
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px auto;
+  }
   .menus-cards__aligned h1 {
-    text-align: center;
+    font-size: 35px;
+    margin: 0;
+  }
+  .menus-cards__aligned .cards__heart {
+    justify-content: center;
+  }
+  .menus-cards__aligned .cards__heart i {
+    font-size: 35px;
+  }
+
+  .cards-style {
+    background-color: white;
   }
 
   .menus-choice {
     display: flex;
     justify-content: space-around;
+    width: 60%;
+    margin: auto;
+  }
+  .menus-choice .meal {
+    background-color: white;
   }
 
   .btn-center {
     margin: auto;
-    max-width: 30%;
+    max-width: 45%;
+    margin-top: 50px;
   }
 }
 
