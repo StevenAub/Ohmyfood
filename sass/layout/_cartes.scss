@@ -32,6 +32,10 @@
     @include Borderradius;
     @include boxshadow;
     position: relative;
+    transition: .5s;
+    &:hover{
+        transform: scale(1.03);
+    }
 }
 .cards {
     max-width: 100%;
@@ -168,7 +172,9 @@
     .restaurants-name {
         img {
             height: 350px;
-            @include Borderradius
+            @include Borderradius;
+            width: 85%;
+            margin-left: 7.5%;
         }
     }
     .menus-choice__flex {
@@ -207,7 +213,7 @@
         img {
             max-width: 650px;
             height: 350px;
-            border-radius: 50%;
+            border-radius: 30px;
             z-index: 1;
             margin-top: 40px;
         }
