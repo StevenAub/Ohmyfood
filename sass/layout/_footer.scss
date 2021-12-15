@@ -25,3 +25,67 @@ footer i {
     font-size: 12px;
     max-width: 10px;
 }
+
+
+/*Page Index*/
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        ul {
+            display: flex;
+            li {
+                flex: 1;
+                text-align: center;
+                font-size: 17px;
+            }
+        }
+        .logo p {
+            font-size: 30px;
+            text-align: center;
+            margin: 0px;
+        }
+    }
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        .logo {
+            padding-bottom: 0px;
+
+            p {
+                font-size: 50px;
+                text-align: center;
+                margin: 0px;
+            }
+        }
+        ul {
+            display: flex;
+
+            li {
+                flex: 1;
+                text-align: center;
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+
+/*Pages Annexes*/
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+    footer {
+        min-height: 100px;
+        ul {
+            font-size: 0.8em;
+            height: 50px;
+        }
+    }
+}

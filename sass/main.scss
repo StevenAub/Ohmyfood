@@ -1,15 +1,24 @@
+
+
+
 @import "./utils/variables";
 @import "./utils/mixins";
+
 @import "./base/typographie";
 
 @import "./utils/animations";
 @import "./components/buttons";
-@import "./layout/mediaqueries-page-index";
+
+
+
+@import "./layout/mediaqueries-page-annexe";
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
 
+
 @import "./layout/cartes";
+
 @import "./layout/footer";
 
-@import "./layout/mediaqueries-page-annexe";
+@import "./layout/mediaqueries-page-index";

@@ -46,3 +46,100 @@ input {
 .maps {
     background-color: $grey-c;
 }
+
+/*Page Index*/
+
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .functions-column {
+        text-align: center;
+        h2 {
+            margin: 30px 0px 0px 0px;
+        }
+    }
+    .functions {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .maps{
+        padding-top: 1%;
+    }
+    nav{
+        width: 60%;
+        margin: 40px auto;
+        @include Borderradius;
+        background-color: rgba($color: #9356dc, $alpha: 0.4);
+    }
+    ::placeholder {
+        background-color: rgba($color: #9356dc, $alpha: 0.6);
+}}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+    .nav {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 90%;
+        margin: auto;
+        height: 400px;
+        gap: 3%;
+        margin-top: 50px;
+        nav {
+            width: 60%;
+            margin: 40px auto 20px auto;
+            background-color: rgba($color: #9356dc, $alpha: 0.4);
+            border-radius: 15px;
+            i {
+                font-size: 25px;
+                color: $color-primary;
+                margin-right: 30px;
+            }
+        }
+        .maps {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            overflow: hidden;
+            @include boxshadow;
+            background-color: white;
+            &__search {
+                padding-top: 20px;
+            }
+            button {
+                margin-top: 40px;
+            }
+        }
+    }
+    input {
+        height: 80%;
+        width: 40%;
+    }
+    ::placeholder {
+        background-color: rgba($color: #9356dc, $alpha: 0.6);
+        min-width: 100%;
+    }
+
+    .functions__choice {
+        background-color: $grey-c;
+        box-shadow: none;
+        border: 0.1px solid $grey-f;
+    }
+    .functions-column {
+        flex: 1;
+        background-color: white;
+        border-radius: 15px;
+        @include boxshadow;
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*Pages Annexes*/
+/*Version Desktop*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media all and (min-width: 992px) {
+}

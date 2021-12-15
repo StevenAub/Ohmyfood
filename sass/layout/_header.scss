@@ -1,15 +1,54 @@
 /*Header sur toutes les pages*/
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-        img{
-           width: 40%;
-           margin: 10px 0px;
+    img {
+        width: 40%;
+        margin: 10px 0px;
+    }
+    a {
+        position: relative;
+        right: 22%;
+    }
+}
+
+/*Page index*/
+
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+    header img {
+        min-width: 30%;
+        margin-top: 30px;
+    }
+}
+
+/*Pages Annexes*/
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+    header {
+        i{
+            font-size: 28px;
         }
-        a{
-            position: relative; right: 22%;
-            
+        img {
+            width: 28%;
         }
+    
+    }
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+    header {
+        img {
+            width: 18%;
+            object-fit: cover;
+        }
+        i {
+            font-size: 30px;
+        }
+    }
 }
