@@ -8,6 +8,7 @@ button{
     cursor: pointer;
     @include boxshadow;
     color:white;
+    transition: 1s;
     
 }
 

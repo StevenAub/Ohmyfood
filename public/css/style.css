@@ -98,6 +98,14 @@ i.fas.fa-check-circle {
   border-radius: 15px;
 }
 
+/*Animation boutton*/
+button:hover {
+  opacity: 0.8;
+  box-shadow: 3px 4px 0 rgba(43, 41, 41, 0.603);
+  border: solid 1px #9356DC;
+  transform: scale(1.05);
+}
+
 /*Animation coloration coeur hover*/
 .heart__empty {
   z-index: 2;
@@ -198,31 +206,34 @@ i.fas.fa-check-circle {
   left: 0;
   bottom: 0;
   right: 0;
-  animation: spin 3s linear 3;
+  animation: spin 2500ms linear 1.5;
   background-color: #9356DC;
 }
 .load_spinner--small {
   width: 60px;
   height: 60px;
-  animation: spin 3s reverse 3 linear;
+  animation: spin 2500ms reverse 1.5 linear;
   background-color: #FF79DA;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .load_spinner--small img {
-  height: 60px;
-  animation: none;
+  height: 50px;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    opacity: 1;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
+    z-index: -3;
+    width: 0%;
+    height: 0%;
   }
 }
 .white {
@@ -257,8 +268,9 @@ button {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
   color: white;
+  transition: 1s;
 }
 
 .btn-center {
@@ -283,8 +295,6 @@ button {
   margin-top: 4%;
 }
 
-/*Version Tablette*/
-/*Version Desktop*/
 /*Header sur toutes les pages*/
 header {
   display: flex;
@@ -339,10 +349,14 @@ nav {
   justify-content: center;
   box-shadow: 0px 15px 8px -14px #a8a7a7 inset;
 }
+nav i {
+  font-size: 20px;
+}
 
 input {
   background-color: #eaeaea;
   border: none;
+  text-align: center;
 }
 
 .functions {
@@ -356,7 +370,7 @@ input {
   width: 90%;
   margin-top: 25px;
   border-radius: 15px;
-  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
   display: flex;
   align-items: center;
 }
@@ -409,6 +423,11 @@ input {
     border-radius: 15px;
     background-color: rgba(147, 86, 220, 0.4);
   }
+  nav i {
+    font-size: 25px;
+    color: #9356DC;
+    margin-right: 30px;
+  }
 
   ::placeholder {
     background-color: rgba(147, 86, 220, 0.6);
@@ -418,7 +437,7 @@ input {
 @media all and (min-width: 992px) {
   .nav {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     width: 90%;
     margin: auto;
     height: 400px;
@@ -442,7 +461,7 @@ input {
     flex-direction: column;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
     background-color: white;
   }
   .nav .maps__search {
@@ -472,7 +491,7 @@ input {
     flex: 1;
     background-color: white;
     border-radius: 15px;
-    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+    box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
   }
   .functions-column h2 {
     margin-top: 50px;
@@ -517,7 +536,7 @@ footer a {
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
   body.color {
-    background-color: rgba(147, 86, 220, 0.4);
+    background-color: white;
   }
 }
 /*Version Desktop*/
@@ -560,7 +579,7 @@ footer a {
   padding-bottom: 7px;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
   position: relative;
 }
 
@@ -610,7 +629,7 @@ footer a {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 20px;
+  box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
   max-width: 90%;
   margin: 3% 5%;
   padding-left: 3%;
@@ -873,20 +892,6 @@ footer i {
     font-size: 0.8em;
     height: 50px;
   }
-}
-/*Version Desktop*/
-@media only screen and (min-width: 992px) {
-  /*Header*/
-  /*Nav*/
-  /*Cartes Restaurant*/
-  /*Footer*/
-}
-/*Version Tablette*/
-@media all and (min-width: 768px) and (max-width: 991px) {
-  /*Header*/
-  /*Nav*/
-  /*Cartes Restaurant*/
-  /*Footer*/
 }
 
 /*# sourceMappingURL=style.css.map */

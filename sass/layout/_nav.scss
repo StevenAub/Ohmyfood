@@ -6,11 +6,16 @@ nav {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 15px 8px -14px #a8a7a7 inset;
+    i{
+        font-size: 20px;
+    }
 }
 
 input {
     background-color: rgb(234, 234, 234);
     border: none;
+    text-align: center;
+    
 }
 .functions {
     display: flex;
@@ -69,6 +74,11 @@ input {
         margin: 40px auto;
         @include Borderradius;
         background-color: rgba($color: #9356dc, $alpha: 0.4);
+        i {
+            font-size: 25px;
+            color: $color-primary;
+            margin-right: 30px;
+        }
     }
     ::placeholder {
         background-color: rgba($color: #9356dc, $alpha: 0.6);
@@ -77,7 +87,7 @@ input {
 @media all and (min-width: 992px) {
     .nav {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         width: 90%;
         margin: auto;
         height: 400px;
