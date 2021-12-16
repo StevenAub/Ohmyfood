@@ -1,21 +1,17 @@
-
 input {
     background-color: rgb(234, 234, 234);
     border: none;
     text-align: center;
-    
 }
 /*Page Index*/
-
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
-
     ::placeholder {
-        background-color:$grey-dark
-}}
+        background-color: $grey-dark;
+    }
+}
 /*Version Desktop*/
 @media all and (min-width: 992px) {
-    
     input {
         background-color: $grey-dark;
         height: 80%;
@@ -25,11 +21,9 @@ input {
         min-width: 100%;
     }
 }
-
 /*Pages Annexes*/
 /*Version Desktop*/
 @media all and (min-width: 768px) and (max-width: 991px) {
 }
-
 @media all and (min-width: 992px) {
 }

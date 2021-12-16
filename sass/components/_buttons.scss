@@ -1,5 +1,5 @@
-button{
-    background: linear-gradient( $color-secondary,$color-primary);
+button {
+    background: linear-gradient($color-secondary, $color-primary);
     border-radius: 50px;
     height: 50px;
     width: 70%;
@@ -7,14 +7,11 @@ button{
     border: none;
     cursor: pointer;
     @include shadow;
-    color:white;
+    color: white;
     transition: 1s;
-    
 }
-.btn-center{
-
-        display: flex;
-        justify-content: center;
-        margin-top: 60px;
-    
+.btn-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
 }

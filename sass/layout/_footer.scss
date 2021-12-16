@@ -6,7 +6,6 @@ footer {
     padding: 25px 0px;
     ul {
         margin: 0;
-
         li {
             margin: 2% 0%;
         }
@@ -25,8 +24,6 @@ footer i {
     font-size: 12px;
     max-width: 10px;
 }
-
-
 /*Page Index*/
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -55,7 +52,6 @@ footer i {
         flex-direction: column;
         .logo {
             padding-bottom: 0px;
-
             p {
                 font-size: 50px;
                 text-align: center;
@@ -64,7 +60,6 @@ footer i {
         }
         ul {
             display: flex;
-
             li {
                 flex: 1;
                 text-align: center;
@@ -73,8 +68,6 @@ footer i {
         }
     }
 }
-
-
 /*Pages Annexes*/
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {

@@ -29,7 +29,6 @@ button:hover {
     border: solid 1px $color-primary;
     transform: scale(1.05);
 }
-
 /*Animation coloration coeur hover*/
 .heart {
     &__empty {
@@ -80,7 +79,6 @@ button:hover {
     }
 }
 /*Animation hover sur les plats*/
-
 /*annimation loader*/
 .load {
     position: absolute;
@@ -90,16 +88,16 @@ button:hover {
     width: 100px;
     height: 100px;
 }
-.load .round{
+.load .round {
     border: 0;
     margin: 0;
     width: 40%;
     height: 40%;
     position: absolute;
     border-radius: 50%;
-    animation: spin 2s cubic-bezier(.33,.32,0,.97) infinite;
+    animation: spin 2s cubic-bezier(0.33, 0.32, 0, 0.97) infinite;
 }
-.load :first-child{
+.load :first-child {
     background: $color-primary;
     animation-delay: -1.5s;
 }
@@ -114,7 +112,6 @@ button:hover {
 .load :last-child {
     background: $grey-dark;
 }
-
 @keyframes spin {
     0%,
     100% {
@@ -130,7 +127,6 @@ button:hover {
         transform: translate(0, 160%);
     }
 }
-
 .white-background {
     background-color: white;
     position: fixed;

@@ -6,11 +6,10 @@ nav {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 15px 8px -14px #a8a7a7 inset;
-    i{
+    i {
         font-size: 20px;
     }
 }
-
 .functions {
     display: flex;
     flex-direction: column;
@@ -41,13 +40,10 @@ nav {
     margin-right: 5%;
     color: rgb(109, 108, 108);
 }
-
 .maps {
     background-color: $grey-light;
 }
-
 /*Page Index*/
-
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
     .functions-column {
@@ -60,23 +56,22 @@ nav {
         width: 50%;
         margin-left: 25%;
     }
-    .maps{
+    .maps {
         padding-top: 1%;
     }
-    nav{
+    nav {
         width: 60%;
         margin: 40px auto;
         background-color: $grey-dark;
         border: 1px solid $color-primary;
         box-shadow: 4px 4px rgba(146, 142, 142, 0.7);
-
         i {
             font-size: 25px;
             color: $color-primary;
             margin-right: 30px;
         }
     }
-    }
+}
 /*Version Desktop*/
 @media all and (min-width: 992px) {
     .nav {
@@ -131,11 +126,9 @@ nav {
         }
     }
 }
-
 /*Pages Annexes*/
 /*Version Desktop*/
 @media all and (min-width: 768px) and (max-width: 991px) {
 }
-
 @media all and (min-width: 992px) {
 }

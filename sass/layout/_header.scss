@@ -13,9 +13,7 @@ header {
         right: 22%;
     }
 }
-
 /*Page index*/
-
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
 }
@@ -26,27 +24,21 @@ header {
         margin-top: 30px;
     }
 }
-
 /*Pages Annexes*/
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
     header {
-        i{
+        i {
             font-size: 28px;
         }
         img {
-            width: 28%;
+            width: 27%;
         }
-    
     }
 }
 /*Version Desktop*/
 @media all and (min-width: 992px) {
     header {
-        img {
-            width: 18%;
-            object-fit: cover;
-        }
         i {
             font-size: 30px;
         }
