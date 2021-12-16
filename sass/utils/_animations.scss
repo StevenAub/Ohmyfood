@@ -87,21 +87,19 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*change these sizes to fit into your project*/
     width: 100px;
     height: 100px;
 }
-.load hr {
+.load .round{
     border: 0;
     margin: 0;
     width: 40%;
     height: 40%;
     position: absolute;
     border-radius: 50%;
-    animation: spin 2s ease infinite;
+    animation: spin 2s cubic-bezier(.33,.32,0,.97) infinite;
 }
-
-.load :first-child {
+.load :first-child{
     background: $color-primary;
     animation-delay: -1.5s;
 }
@@ -133,7 +131,7 @@ button:hover {
     }
 }
 
-.white {
+.white-background {
     background-color: white;
     position: fixed;
     min-width: 100%;
