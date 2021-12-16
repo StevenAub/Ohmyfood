@@ -6,13 +6,11 @@ button{
     font-weight: bold;
     border: none;
     cursor: pointer;
-    @include boxshadow;
+    @include shadow;
     color:white;
     transition: 1s;
     
 }
-
-
 .btn-center{
 
         display: flex;
@@ -20,20 +18,3 @@ button{
         margin-top: 60px;
     
 }
-
-.new
-{
-    height: 32px;
-    width: 90px;
-    font-size: .9em;
-    color: rgb(67, 175, 148);
-    background-color: rgb(153, 226, 208);
-    display: flex;
-    align-items: center;
-    position: absolute;
-    justify-content: center;
-    border-radius: 3px;
-    z-index: 1;
-    right: 5%;
-    margin-top: 4%;
-    }

@@ -24,7 +24,7 @@ footer a{
 /*Version desktop*/
 @media all and (min-width: 992px) {
     body {
-        background-color: $grey-c;
+        background-color: $grey-light;
     }
 }
 
@@ -32,7 +32,7 @@ footer a{
 /*Version Tablette*/
 @media all and (min-width: 768px) and (max-width: 991px) {
     body.color{
-        background-color: $grey-f;
+        background-color: $grey-dark;
     }
 
 }
@@ -40,6 +40,6 @@ footer a{
 @media all and (min-width: 992px) {
     body {
         margin: auto;
-        background-color: $grey-f;
+        background-color: $grey-dark;
     }
 }

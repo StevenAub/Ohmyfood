@@ -1,10 +1,10 @@
-@mixin boxshadow{
+@mixin shadow{
     box-shadow: rgba(51, 51, 51, 0.2) 0px 20px 25px;
     }
-@mixin Borderradius {
+@mixin rounded-edge {
     border-radius: 15px;
     }
-@mixin aligncenter {
+@mixin alignment-center {
     display: flex;
     flex-direction: column;
     align-items: center;

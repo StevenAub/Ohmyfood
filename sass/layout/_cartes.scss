@@ -7,7 +7,7 @@
     position: relative;
 }
 .restaurants {
-    background-color: $grey-c;
+    background-color: $grey-light;
     height: 1100px;
     padding-top: 20px;
     margin-top: 40px;
@@ -29,8 +29,8 @@
     margin-top: 3%;
     padding-bottom: 7px;
     overflow: hidden;
-    @include Borderradius;
-    @include boxshadow;
+    @include rounded-edge;
+    @include shadow;
     position: relative;
     transition: .5s;
     &:hover{
@@ -62,7 +62,7 @@
     min-width: 90%;
 }
 .menus-cards {
-    background-color: $grey-f;
+    background-color: $grey-dark;
     border-radius: 50px 50px 0px 0px;
     margin-top: -45px;
     position: relative;
@@ -79,7 +79,7 @@
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    @include boxshadow;
+    @include shadow;
     max-width: 90%;
     margin: 3% 5%;
     padding-left: 3%;
@@ -139,7 +139,7 @@
 /*Version Desktop*/
 @media all and (min-width: 992px) {
     section.restaurants {
-        background: $grey-f;
+        background: $grey-dark;
         max-width: 80%;
         margin:40px auto;
         max-height: 680px;
@@ -161,8 +161,8 @@
         }
     }
     .new {
-        z-index: 1;
         position: absolute;
+        z-index: 1;
     }
 }
 
@@ -172,7 +172,7 @@
     .restaurants-name {
         img {
             height: 350px;
-            @include Borderradius;
+            @include rounded-edge;
             width: 85%;
             margin-left: 7.5%;
         }
@@ -185,11 +185,11 @@
         width: 80%;
         margin: -5% auto 0 auto;
         border: 1px solid $color-primary;
-        background-color: $grey-f;
+        background-color: $grey-light;
         &__aligned {
             width: 60%;
             margin: auto;
-            background-color: $grey-f;
+            background-color: $grey-dark;
             h1{
                 font-size: 30px;
                 white-space: nowrap;
@@ -219,7 +219,7 @@
         }
     }
     .menus-cards {
-        background-color: $grey-f;
+        background-color: $grey-dark;
         &__aligned {
             justify-content: center;
             flex-direction: column;

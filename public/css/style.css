@@ -93,6 +93,7 @@ i.fas.fa-check-circle {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 0;
   background-color: #8641d8;
   opacity: 0;
   transition: opacity 800ms;
@@ -102,14 +103,13 @@ i.fas.fa-check-circle {
 /*Animation boutton*/
 button:hover {
   opacity: 0.8;
-  box-shadow: 3px 4px 0 rgba(43, 41, 41, 0.603);
+  box-shadow: 4px 5px 0 rgba(43, 41, 41, 0.603);
   border: solid 1px #9356DC;
   transform: scale(1.05);
 }
 
 /*Animation coloration coeur hover*/
 .heart__empty {
-  z-index: 2;
   position: absolute;
   font-size: 25px;
   opacity: 1;
@@ -129,10 +129,8 @@ button:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 25px;
-  z-index: 1;
 }
 .heart__full:hover {
-  z-index: 1;
   opacity: 1;
   content: "";
   display: flex;
@@ -192,73 +190,82 @@ button:hover {
 }
 /*Animation hover sur les plats*/
 /*annimation loader*/
-.load_spinner {
-  border: 5px solid white;
-  border-top: 5px #9356DC solid;
-  border-right: 5px #FF79DA solid;
-  border-bottom: 5px #9356DC solid;
-  border-left: 5px #FF79DA solid;
-  border-radius: 50%;
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
   width: 100px;
   height: 100px;
-  margin: auto;
+}
+
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  animation: spin 2500ms linear 1.5;
-  background-color: #9356DC;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
 }
-.load_spinner--small {
-  width: 60px;
-  height: 60px;
-  animation: spin 2500ms reverse 1.5 linear;
-  background-color: #FF79DA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.load :first-child {
+  background: #9356DC;
+  animation-delay: -1.5s;
 }
-.load_spinner--small img {
-  height: 50px;
+
+.load :nth-child(2) {
+  background: #FF79DA;
+  animation-delay: -1s;
+}
+
+.load :nth-child(3) {
+  background: #99E2D0;
+  animation-delay: -0.5s;
+}
+
+.load :last-child {
+  background: #eaeaea;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    z-index: 3;
-    width: 100px;
-    height: 100px;
+  0%, 100% {
+    transform: translate(0);
   }
-  100% {
-    transform: rotate(360deg);
-    z-index: -3;
-    width: 0%;
-    height: 0%;
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
   }
 }
 .white {
   background-color: white;
-  z-index: -2;
   position: fixed;
   min-width: 100%;
   min-height: 100%;
   opacity: 0;
   animation: disappears 4s;
+  z-index: -1;
 }
 
 @keyframes disappears {
   0% {
     opacity: 1;
-    z-index: 3;
+    z-index: 2;
   }
   50% {
     opacity: 1;
-    z-index: 3;
+  }
+  95% {
+    z-index: 2;
   }
   100% {
     opacity: 0;
-    z-index: -3;
   }
 }
 button {
@@ -291,11 +298,37 @@ button {
   position: absolute;
   justify-content: center;
   border-radius: 3px;
-  z-index: 1;
   right: 5%;
   margin-top: 4%;
 }
 
+input {
+  background-color: #eaeaea;
+  border: none;
+  text-align: center;
+}
+
+/*Page Index*/
+/*Version Tablette*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  ::placeholder {
+    background-color: #eaeaea;
+  }
+}
+/*Version Desktop*/
+@media all and (min-width: 992px) {
+  input {
+    background-color: #eaeaea;
+    height: 80%;
+    width: 40%;
+  }
+
+  ::placeholder {
+    min-width: 100%;
+  }
+}
+/*Pages Annexes*/
+/*Version Desktop*/
 /*Header sur toutes les pages*/
 header {
   display: flex;
@@ -352,12 +385,6 @@ nav {
 }
 nav i {
   font-size: 20px;
-}
-
-input {
-  background-color: #eaeaea;
-  border: none;
-  text-align: center;
 }
 
 .functions {
@@ -421,17 +448,14 @@ input {
   nav {
     width: 60%;
     margin: 40px auto;
-    border-radius: 15px;
-    background-color: rgba(147, 86, 220, 0.4);
+    background-color: #eaeaea;
+    border: 1px solid #9356DC;
+    box-shadow: 4px 4px rgba(146, 142, 142, 0.7);
   }
   nav i {
     font-size: 25px;
     color: #9356DC;
     margin-right: 30px;
-  }
-
-  ::placeholder {
-    background-color: rgba(147, 86, 220, 0.6);
   }
 }
 /*Version Desktop*/
@@ -448,8 +472,9 @@ input {
   .nav nav {
     width: 60%;
     margin: 40px auto 20px auto;
-    background-color: rgba(147, 86, 220, 0.4);
-    border-radius: 15px;
+    background-color: #eaeaea;
+    border: 1px solid #9356DC;
+    box-shadow: 4px 4px rgba(146, 142, 142, 0.7);
   }
   .nav nav i {
     font-size: 25px;
@@ -470,16 +495,6 @@ input {
   }
   .nav .maps button {
     margin-top: 40px;
-  }
-
-  input {
-    height: 80%;
-    width: 40%;
-  }
-
-  ::placeholder {
-    background-color: rgba(147, 86, 220, 0.6);
-    min-width: 100%;
   }
 
   .functions__choice {
@@ -719,8 +734,8 @@ footer a {
   }
 
   .new {
-    z-index: 1;
     position: absolute;
+    z-index: 1;
   }
 }
 /*Pages Annexes*/
@@ -742,7 +757,7 @@ footer a {
     width: 80%;
     margin: -5% auto 0 auto;
     border: 1px solid #9356DC;
-    background-color: #eaeaea;
+    background-color: #f6f6f6;
   }
   .menus-cards__aligned {
     width: 60%;
