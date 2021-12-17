@@ -16,7 +16,7 @@ a {
   color: black;
 }
 
-.logo {
+h1.logo, .logo {
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -347,6 +347,7 @@ button, .button {
 }
 
 .new {
+  display: block;
   height: 32px;
   width: 90px;
   font-size: 0.9em;
@@ -358,6 +359,7 @@ button, .button {
   border-radius: 3px;
   right: 5%;
   margin-top: 4%;
+  position: absolute;
 }
 
 input {
