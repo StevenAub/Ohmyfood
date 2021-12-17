@@ -1,5 +1,4 @@
 .new {
-    display: block;
     height: 32px;
     width: 90px;
     font-size: 0.9em;
@@ -12,4 +11,6 @@
     right: 5%;
     margin-top: 4%;
     position: absolute;
+    z-index: 1;
+
 }
