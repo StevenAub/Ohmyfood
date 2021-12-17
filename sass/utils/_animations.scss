@@ -79,6 +79,30 @@ button:hover {
     }
 }
 /*Animation hover sur les plats*/
+.cards-style__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    border-radius: 0 15px 15px 0;
+    margin-right: -70px;
+    background-color: $color-tertiary;
+    transition: all 1s;
+}
+.cards-style__rotate {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    transition: all 1100ms;
+    position: relative;
+    width: 80px;
+}
+.cards-style:hover .cards-style__check {
+    margin-right: 0;
+}
+.cards-style:hover .cards-style__rotate {
+    transform: rotate(360deg);
+}
 /*annimation loader*/
 .load {
     position: absolute;
@@ -129,12 +153,22 @@ button:hover {
 }
 .white-background {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     min-width: 100%;
     min-height: 100%;
     opacity: 0;
-    animation: disappears 4s;
+    animation: disappears 3s;
     z-index: -1;
+    .logo{
+        content: "";
+        color: white;
+        font-size: 40px;
+        padding-bottom: 200px;
+        animation: change-color 2s cubic-bezier(0.33, 0.32, 0, 0.97) infinite;
+    }
 }
 @keyframes disappears {
     0% {
@@ -150,4 +184,23 @@ button:hover {
     100% {
         opacity: 0;
     }
+    
 }
+@keyframes change-color {
+    0%{
+color: $black;
+    }
+    25%{
+color: $color-primary;
+    }
+    50%{
+color: $color-secondary;
+    }
+    75%{
+color: $color-tertiary;
+    }
+    100%{
+color: $grey-light;
+    }
+}
+

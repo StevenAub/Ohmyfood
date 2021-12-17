@@ -17,9 +17,8 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-    }
-}
-.restaurants a {
+     }
+      a {
     display: block;
     background-color: white;
     width: 90%;
@@ -33,7 +32,7 @@
     transition: 0.5s;
     &:hover {
         transform: scale(1.03);
-    }
+    }}
 }
 .cards {
     max-width: 100%;
@@ -91,30 +90,6 @@
         align-items: flex-end;
         margin: 30px 20px 10px auto;
     }
-}
-.cards-style__check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    border-radius: 0 15px 15px 0;
-    margin-right: -70px;
-    background-color: $color-tertiary;
-    transition: all 1s;
-}
-.cards-style__rotate {
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    transition: all 1100ms;
-    position: relative;
-    width: 80px;
-}
-.cards-style:hover .cards-style__check {
-    margin-right: 0;
-}
-.cards-style:hover .cards-style__rotate {
-    transform: rotate(360deg);
 }
 /*Page Index*/
 /*Version Tablette*/
