@@ -1,14 +1,18 @@
-button {
+button, .button {
     background: linear-gradient($color-secondary, $color-primary);
     border-radius: 50px;
     height: 50px;
     width: 70%;
+    margin: auto;
     font-weight: bold;
-    border: none;
     cursor: pointer;
-    @include shadow;
     color: white;
     transition: 1s;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btn-center {
     display: flex;

@@ -23,7 +23,7 @@
     }
 }
 /*Animation boutton*/
-button:hover {
+button:hover,.button:hover {
     opacity: 0.8;
     box-shadow: 4px 5px 0 rgba(43, 41, 41, 0.603);
     border: solid 1px $color-primary;

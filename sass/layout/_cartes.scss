@@ -17,22 +17,23 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-     }
-      a {
-    display: block;
-    background-color: white;
-    width: 90%;
-    margin: 10px auto;
-    height: 230px;
-    padding-bottom: 10px;
-    overflow: hidden;
-    @include rounded-edge;
-    @include shadow;
-    position: relative;
-    transition: 0.5s;
-    &:hover {
-        transform: scale(1.03);
-    }}
+    }
+    a {
+        display: block;
+        background-color: white;
+        width: 90%;
+        margin: 10px auto;
+        height: 230px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        @include rounded-edge;
+        @include shadow;
+        position: relative;
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
 }
 .cards {
     max-width: 100%;
