@@ -3,10 +3,9 @@
     width: 90px;
     font-size: 0.9em;
     color: rgb(67, 175, 148);
-    background-color: rgb(153, 226, 208);
+    background-color: $color-tertiary;
     display: flex;
     align-items: center;
-    position: absolute;
     justify-content: center;
     border-radius: 3px;
     right: 5%;
