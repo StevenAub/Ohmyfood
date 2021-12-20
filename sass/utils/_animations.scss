@@ -1,8 +1,11 @@
 /*Animation menu Fonctionnement*/
 .functions__choice {
     position: relative;
+    transition: 1s;
     &:hover {
         cursor: pointer;
+        border-bottom:rgba(126, 124, 124, 0.603) ;
+        box-shadow: 4px 5px 0 rgba(122, 120, 120, 0.603);
         &::after {
             opacity: 0.3;
             @include rounded-edge;
@@ -160,14 +163,14 @@ button:hover,.button:hover {
     min-width: 100%;
     min-height: 100%;
     opacity: 0;
-    animation: disappears 3s;
+    animation: disappears 2s;
     z-index: -1;
     .logo{
         content: "";
         color: white;
         font-size: 40px;
         padding-bottom: 200px;
-        animation: change-color 2s cubic-bezier(0.33, 0.32, 0, 0.97) infinite;
+        animation: change-color 2s cubic-bezier(0.33, 0.32, 0, 0.97) 3;
     }
 }
 @keyframes disappears {
