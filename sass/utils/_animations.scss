@@ -4,8 +4,7 @@
     transition: 1s;
     &:hover {
         cursor: pointer;
-        border-bottom:rgba(126, 124, 124, 0.603) ;
-        box-shadow: 4px 5px 0 rgba(122, 120, 120, 0.603);
+        box-shadow: 4px 5px 0 rgba(95, 92, 92, 0.603);
         &::after {
             opacity: 0.3;
             @include rounded-edge;
@@ -28,8 +27,7 @@
 /*Animation boutton*/
 button:hover,.button:hover {
     opacity: 0.8;
-    box-shadow: 4px 5px 0 rgba(43, 41, 41, 0.603);
-    border: solid 1px $color-primary;
+    box-shadow: 4px 5px 0 rgba(95, 92, 92, 0.603);
     transform: scale(1.05);
 }
 /*Animation coloration coeur hover*/

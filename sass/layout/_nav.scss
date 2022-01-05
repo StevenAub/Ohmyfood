@@ -111,9 +111,7 @@ nav {
         }
     }
     .functions__choice {
-        background-color: $grey-light;
-        box-shadow: none;
-        border: 0.1px solid $grey-dark;
+        background-color: $grey-dark;
     }
     .functions-column {
         flex: 1;
@@ -125,10 +123,4 @@ nav {
             margin-bottom: 0;
         }
     }
-}
-/*Pages Annexes*/
-/*Version Desktop*/
-@media all and (min-width: 768px) and (max-width: 991px) {
-}
-@media all and (min-width: 992px) {
 }
