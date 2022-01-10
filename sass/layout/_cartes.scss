@@ -58,6 +58,15 @@
     object-fit: cover;
     object-position: center 60%;
 }
+.menus-choice h2::after{ 
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin-top: 5px;
+    background-color: $color-tertiary;
+
+}
 .menus-choice {
     min-width: 90%;
 }
@@ -73,7 +82,9 @@
         align-items: center;
         padding-top: 35px;
     }
+
 }
+
 .cards-style {
     display: flex;
     background-color: white;
